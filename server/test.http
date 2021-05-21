@@ -1,9 +1,35 @@
-@url=http://127.0.0.1:8080
+@url=http://localhost:8080
 
 ################################################################
-POST {{url}}/admin?account=aaa&pw=bbb
+POST {{url}}/posts
 Content-Type: application/json
 
 {
-  "account":"admin"
+    "id": 4,
+    "title": "My test",
+    "author": "10codeing"
 }
+
+##################
+GET {{url}}/posts
+
+#####
+PUT {{url}}/posts/2
+Content-Type: application/json
+
+{
+    "title": "New 22",
+    "author": "iasdfasdfasdf"
+}
+
+
+#############
+PATCH {{url}}/posts/2
+Content-Type: application/json
+
+{
+    "title": "Patch 2"
+}
+
+#########
+DELETE {{url}}/posts/4
