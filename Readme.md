@@ -16,31 +16,31 @@
 
 - server
 
-> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsServer_v0.0.2
+> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsServer_v0.0.3
 
 - client
 
-> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsClient_v0.0.2
+> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsClient_v0.0.3
 
 ### MAC
 
 - server
 
-> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsServerDar_v0.0.2
+> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsServerDar_v0.0.3
 
 - client
 
-curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsClientDar_v0.0.2
+curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsClientDar_v0.0.3
 
 ### Windows
 
 - server
 
-> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsServer_v0.0.2.exe
+> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsServer_v0.0.3.exe
 
 - client
 
-curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsClient_v0.0.2.exe
+curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsClient_v0.0.3.exe
 
 ## How to use
 
