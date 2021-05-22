@@ -32,10 +32,14 @@ func SocketOn() {
 		job.PassReplyByChannel(reply)
 	})
 
+	Server.OnEvent("/", "echo", func(s socketio.Conn, msg string) {
+		s.Emit("echo", msg)
+	})
+
 	Server.OnDisconnect("/", func(s socketio.Conn, reason string) {
 		// 斷線的時候釋放domain
 		domain.LetDomainFree(s.ID())
-		log.Println("closed", reason)
+		log.Printf("closed socketID: %s, by: %s", s.ID(), reason)
 	})
 
 	if err := Server.Serve(); err != nil {

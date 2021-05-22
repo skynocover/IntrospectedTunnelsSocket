@@ -62,37 +62,31 @@ func main() {
 	})
 
 	client.On("request", func(reqjson request) {
-		// var reqjson request
-		// json.Unmarshal(req, &reqjson)
-		// log.Printf("on request: %+v\n", reqjson)
+		var reply = Reply{
+			Domain: domain,
+			JobID:  reqjson.JobID,
+			Err:    err,
+		}
 
 		resp, err := send(reqjson)
 		if err != nil {
-			var reply = Reply{
-				Domain: domain,
-				JobID:  reqjson.JobID,
-				Err:    err,
-			}
+			log.Println("send request error: ", err)
+			reply.Err = err
 			client.Emit("response", reply)
+			return
 		}
 		body, err := ioutil.ReadAll(resp.Body)
 		if err != nil {
-			var reply = Reply{
-				Domain: domain,
-				JobID:  reqjson.JobID,
-				Err:    err,
-			}
+			log.Println("send request error: ", err)
+			reply.Err = err
 			client.Emit("response", reply)
+			return
 		}
 		defer resp.Body.Close()
 
-		var reply = Reply{
-			Domain:     domain,
-			JobID:      reqjson.JobID,
-			Body:       body,
-			Header:     resp.Header,
-			StatusCode: resp.StatusCode,
-		}
+		reply.Body = body
+		reply.Header = resp.Header
+		reply.StatusCode = resp.StatusCode
 
 		log.Printf("reply %+v\n", reply)
 		client.Emit("response", reply)
@@ -108,25 +102,25 @@ func main() {
 		domain = room
 	})
 
-	// client.Emit("regist")
+	client.On("echo", func(echo string) {
+		log.Printf("server echo :%s\n", echo)
+	})
 
 	reader := bufio.NewReader(os.Stdin)
 	for {
 		data, _, _ := reader.ReadLine()
-		command := string(data)
-		client.Emit("request", command)
-		log.Printf("send message:%v\n", command)
+		msg := string(data)
+		client.Emit("echo", msg)
+		log.Printf("send message:%v\n", msg)
 	}
 }
 
 func send(r request) (resp *http.Response, err error) {
 	client := &http.Client{}
 
-	//這邊可以任意變換 http method  GET、POST、PUT、DELETE
 	req, err := http.NewRequest(r.Method, fmt.Sprintf("%s%s", os.Getenv("PROXY"), r.Path), bytes.NewReader(r.Body))
 	if err != nil {
-		log.Println(err)
-		return
+		return nil, err
 	}
 	for key, values := range r.Header {
 		for _, value := range values {
@@ -135,10 +129,4 @@ func send(r request) (resp *http.Response, err error) {
 	}
 
 	return client.Do(req)
-	// if err != nil {
-	// 	log.Println(err)
-	// 	return
-	// }
-	// defer resp.Body.Close()
-	// return ioutil.ReadAll(resp.Body)
 }

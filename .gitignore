@@ -2,3 +2,4 @@ client/.vscode
 client/go.sum
 server/.vscode
 server/go.sum
+assets
