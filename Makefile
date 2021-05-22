@@ -1,4 +1,4 @@
-VERSION:=0.0.1
+VERSION:=0.0.2
 
 git:
 	git add .
@@ -23,4 +23,4 @@ clientLinux:
 	cd client/src && GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o ../../assets/itsClient_v${VERSION}
 
 serverLinux:
-	cd server/src && GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o ../../assets/itsServer_v${VERSION}
+	cd server/src && GOOS=linux go build -o ../../assets/itsServer_v${VERSION}

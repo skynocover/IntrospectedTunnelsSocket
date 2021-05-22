@@ -9,10 +9,11 @@ import (
 	socketio "github.com/googollee/go-socket.io"
 )
 
-var Server *socketio.Server
+// var Server *socketio.Server
+var Server = socketio.NewServer(nil)
 
 func SocketOn() {
-	Server = socketio.NewServer(nil)
+	// Server = socketio.NewServer(nil)
 
 	Server.OnConnect("/", func(s socketio.Conn) error {
 		s.SetContext("")

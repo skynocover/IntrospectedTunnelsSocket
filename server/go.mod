@@ -5,6 +5,7 @@ go 1.15
 require (
 	github.com/buaazp/fasthttprouter v0.1.1
 	github.com/google/uuid v1.1.2
+	github.com/googollee/go-engine.io v1.4.2
 	github.com/googollee/go-socket.io v1.5.1
 	github.com/joho/godotenv v1.3.0
 	github.com/kataras/iris/v12 v12.1.8

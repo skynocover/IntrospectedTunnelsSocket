@@ -24,7 +24,7 @@ func main() {
 
 	domain.SetDomain()
 
-	go socket.SocketOn()
+	socket.SocketOn()
 
 	app := iris.New()
 	log.Println(fmt.Sprintf("Serving at localhost:%s...", os.Getenv("SERVER_LISTEN")))

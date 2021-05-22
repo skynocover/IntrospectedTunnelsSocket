@@ -98,7 +98,7 @@ func main() {
 	})
 
 	client.On("join", func(room string) {
-		log.Printf("room name:%s\n", room)
+		log.Printf("get domain name:%s\n", room)
 		domain = room
 	})
 
