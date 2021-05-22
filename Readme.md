@@ -1,6 +1,10 @@
 # IntrospectedTunnelsSocket
 
-Introspected Tunnel for localhost
+> Introspected Tunnel for localhost
+
+- [structure](#structure)
+- [Download](#download)
+- [How to use](#how-to-use)
 
 ## Structure
 
@@ -12,31 +16,31 @@ Introspected Tunnel for localhost
 
 - server
 
-> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsServer_v0.0.1
+> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsServer_v0.0.2
 
 - client
 
-> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsClient_v0.0.1
+> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsClient_v0.0.2
 
 ### MAC
 
 - server
 
-> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsServerDar_v0.0.1
+> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsServerDar_v0.0.2
 
 - client
 
-curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsClientDar_v0.0.1
+curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsClientDar_v0.0.2
 
 ### Windows
 
 - server
 
-> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsServer_v0.0.1.exe
+> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsServer_v0.0.2.exe
 
 - client
 
-curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsClient_v0.0.1.exe
+curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsClient_v0.0.2.exe
 
 ## How to use
 
