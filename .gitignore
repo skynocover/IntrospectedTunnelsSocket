@@ -4,3 +4,4 @@ server/.vscode
 server/go.sum
 assets
 .env
+.DS_Store

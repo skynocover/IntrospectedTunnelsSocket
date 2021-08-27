@@ -16,31 +16,45 @@
 
 - server
 
-> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsServer_v0.0.3
+```
+curl -L https://github.com/skynocover/IntrospectedTunnelsSocket/releases/download/v0.0.3/itsServer_v0.0.3 > itsServer_v0.0.3
+```
+
 
 - client
 
-> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsClient_v0.0.3
+
+```
+curl -L https://github.com/skynocover/IntrospectedTunnelsSocket/releases/download/v0.0.3/itsClient_v0.0.3 > itsClient_v0.0.3
+```
 
 ### MAC
 
 - server
 
-> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsServerDar_v0.0.3
+```
+curl -L https://github.com/skynocover/IntrospectedTunnelsSocket/releases/download/v0.0.3/itsServerDar_v0.0.3 > itsServerDar_v0.0.3
+```
 
 - client
 
-curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsClientDar_v0.0.3
+```
+curl -L https://github.com/skynocover/IntrospectedTunnelsSocket/releases/download/v0.0.3/itsClientDar_v0.0.3 > itsClientDar_v0.0.3
+```
 
 ### Windows
 
 - server
 
-> curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsServer_v0.0.3.exe
+```
+curl -L https://github.com/skynocover/IntrospectedTunnelsSocket/releases/download/v0.0.3/itsServer_v0.0.3.exe > itsServer_v0.0.3.exe
+```
 
 - client
 
-curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_binaryStore/master/itsClient_v0.0.3.exe
+```
+curl -L https://github.com/skynocover/IntrospectedTunnelsSocket/releases/download/v0.0.3/itsClient_v0.0.3.exe > itsClient_v0.0.3.exe
+```
 
 ## How to use
 
@@ -49,8 +63,8 @@ curl -O https://raw.githubusercontent.com/skynocover/IntrospectedTunnelsSocket_b
 > set .env file
 
 ```
-SERVER_LISTEN=8080 # 
-DOMAINS=domain.com,domain2.tk 
+SERVER_LISTEN=80
+DOMAINS=domain2.com,domain3.com
 ```
 
 - SERVER_LISTEN: this is your port for listen request
@@ -63,7 +77,7 @@ Run the itsServer on your VPS with domain
 > set .env file
 
 ```
-DOMAIN=http://localhost:8080
+DOMAIN=http://domain.com
 PROXY=http://localhost:3020
 ```
 
