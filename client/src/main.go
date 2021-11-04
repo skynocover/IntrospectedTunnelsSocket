@@ -42,6 +42,7 @@ func main() {
 		Transport: "websocket",
 		Query:     make(map[string]string),
 	}
+	opts.Query["domain"] =  os.Getenv("SPECIFY_DOMAIN")
 	uri := fmt.Sprintf("%s/socket.io/", os.Getenv("DOMAIN"))
 
 	client, err := socketio_client.NewClient(uri, opts)
@@ -98,7 +99,7 @@ func main() {
 	})
 
 	client.On("join", func(room string) {
-		log.Printf("get domain name:%s\n", room)
+		log.Printf("get domain : %s\n", room)
 		domain = room
 	})
 

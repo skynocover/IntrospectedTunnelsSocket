@@ -2,17 +2,13 @@ package main
 
 import (
 	"fmt"
-
 	"log"
-
 	"os"
 
-	"itgserver/src/domain"
 	"itgserver/src/handler"
 	"itgserver/src/socket"
 
 	"github.com/joho/godotenv"
-
 	"github.com/kataras/iris/v12"
 )
 
@@ -21,8 +17,6 @@ func main() {
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
-
-	domain.SetDomain()
 
 	go socket.SocketOn()
 
